@@ -12,18 +12,20 @@
 
     // Set these to the payment cards accepted.
     // They will nearly always be the same.
-    supportedPaymentNetworks = @[PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex];
+    supportedPaymentNetworks = @[PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex,
+        PKPaymentNetworkCartesBancaires, PKPaymentNetworkChinaUnionPay, PKPaymentNetworkDiscover,
+        PKPaymentNetworkEftpos, PKPaymentNetworkElectron, PKPaymentNetworkElo, 
+        PKPaymentNetworkIDCredit, PKPaymentNetworkInterac, PKPaymentNetworkJCB, PKPaymentNetworkMada, PKPaymentNetworkMaestro, PKPaymentNetworkPrivateLabel, PKPaymentNetworkQuicPay, PKPaymentNetworkSuica, PKPaymentNetworkVPay
+    ];
 
     // Set the capabilities that your merchant supports
     // Adyen for example, only supports the 3DS one.
-    merchantCapabilities = PKMerchantCapability3DS;// PKMerchantCapabilityEMV;
+    merchantCapabilities = PKMerchantCapabilityCredit | PKMerchantCapabilityDebit;
+    // PKMerchantCapability3DS | PKMerchantCapabilityEMV;
 
     // Stripe Publishable Key
-#ifndef NDEBUG
-    NSString * stripePublishableKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"StripeTestPublishableKey"];
-#else
+    // NSString * stripePublishableKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"StripeTestPublishableKey"];
     NSString * stripePublishableKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"StripeLivePublishableKey"];
-#endif
     NSLog(@"Stripe stripePublishableKey == %@", stripePublishableKey);
     NSString * appleMerchantIdentifier = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"AppleMerchantIdentifier"];
     NSLog(@"ApplePay appleMerchantIdentifier == %@", appleMerchantIdentifier);
