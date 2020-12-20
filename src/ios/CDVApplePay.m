@@ -602,6 +602,7 @@
                             completion:^(STPToken * _Nullable token, NSError * _Nullable error) {        
         NSMutableDictionary* response = [self formatPaymentForApplication:payment];      
         NSLog(@"Stripe token == %@", token.tokenId);        
+        NSLog(@"Stripe livemode == %@", token.livemode);        
         if (token) {
             [response setObject:token.tokenId forKey:@"stripeToken"];
         }
