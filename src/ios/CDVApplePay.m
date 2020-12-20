@@ -15,7 +15,8 @@
     supportedPaymentNetworks = @[PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex,
         PKPaymentNetworkCartesBancaires, PKPaymentNetworkChinaUnionPay, PKPaymentNetworkDiscover,
         PKPaymentNetworkEftpos, PKPaymentNetworkElectron, PKPaymentNetworkElo, 
-        PKPaymentNetworkIDCredit, PKPaymentNetworkInterac, PKPaymentNetworkJCB, PKPaymentNetworkMada, PKPaymentNetworkMaestro, PKPaymentNetworkPrivateLabel, PKPaymentNetworkQuicPay, PKPaymentNetworkSuica, PKPaymentNetworkVPay
+        PKPaymentNetworkIDCredit, PKPaymentNetworkInterac, PKPaymentNetworkJCB, PKPaymentNetworkMaestro, 
+        PKPaymentNetworkPrivateLabel, PKPaymentNetworkQuicPay, PKPaymentNetworkSuica
     ];
 
     // Set the capabilities that your merchant supports
